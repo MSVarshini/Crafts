@@ -7,3 +7,7 @@ class Customer(models.Model):
 	Mobile=models.CharField(max_length=10)
 	Email = models.EmailField(blank=True)
 	Password = models.CharField(max_length=10,null=True)
+
+class Hotel(models.Model):
+    name = models.CharField(max_length=50)
+    hotel_Main_Img = models.ImageField(upload_to='images/')
