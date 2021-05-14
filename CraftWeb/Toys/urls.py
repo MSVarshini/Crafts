@@ -8,15 +8,22 @@ urlpatterns=[
 	path('home/',views.home,name="home"),
 	path('login/',views.login,name="login"),
 	path('register/',views.register,name="register"),
+	#path('login1/',views.login1,name="login1"),
+	# path('register1/',views.register1,name="register1"),
+	path('requestProduct/',views.requestProduct,name="requestProduct"),
 	path('cart/',views.cart,name="cart"),
 	path('checkout/',views.checkout,name="checkout"),
 	path('contact/',views.contact,name="contact"),
 	path('myAccount/',views.myAccount,name="myAccount"),
 	path('productDetail/',views.productDetail,name="productDetail"),
 	path('productList/',views.productList,name="productList"),
+	path('paintings/',views.paintings,name="paintings"),
+	path('kondapalli/',views.kondapalli,name="kondapalli"),
+	path('bottleArts/',views.bottleArts,name="bottleArts"),
 	path('wishlist/',views.wishlist,name="wishlist"),
-	 path('image_upload/', views.hotel_image_view, name = 'image_upload'),
+	path('image_upload/', views.hotel_image_view, name = 'image_upload'),
     path('success/', views.success, name = 'success'),
+    path('Edit/', views.Edit, name = 'Edit'),
 
 ]
 urlpatterns += staticfiles_urlpatterns()

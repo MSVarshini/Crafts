@@ -20,12 +20,28 @@
         <link href="lib/slick/slick-theme.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        {% load static %}
+       {% load static %}
         <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
            </head>
     </head>
 
     <body>
+        <!-- Top bar Start -->
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <i class="fa fa-envelope"></i>
+                        support@email.com
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa fa-phone-alt"></i>
+                        +012-345-6789
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top bar End -->
         
         <!-- Nav Bar Start -->
         <div class="nav">
@@ -48,7 +64,7 @@
                                 </div>
                             </div>
                             <a href="{% url 'requestProduct'%}" class="nav-item nav-link">Request Product</a>
-                            <a href="{% url 'paintings' %}" class="nav-item nav-link">Wishlist</a>
+                            <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
                             <a href="cart.html" class="nav-item nav-link">Cart</a>
                             <a href="checkout.html" class="nav-item nav-link">Checkout</a>
                             <a href="my-account.html" class="nav-item nav-link">My Account</a>
@@ -67,55 +83,59 @@
                 </nav>
             </div>
         </div>
-            
-        
+        <br>
         <br>
         <!-- Nav Bar End -->      
         
         
         
-        
-        <!-- Product List Start -->
-        <div class="product-view">
+        <!-- Breadcrumb Start -->
+        <div class="breadcrumb-wrap">
             <div class="container-fluid">
-                <div class="row"> 
-                {% for hotel in Images %}
-                <div class="col-md-3">
-                                <div class="product-item">
-                                    <div class="product-title">
-                                        <a href="#">{{hotel.Name}}</a>
-                                        <div class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item active">Request Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+        
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    
+                    
+                        <div class="contact-form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" placeholder="Your Name" />
                                     </div>
-                                    <div class="product-image">
-                                        <a href="product-detail.html">
-                                            <img src="{{ hotel.Image.url }}" alt="Product Image" class="img-responsive" style="height:250px">
-                                        </a>
-                                        <div class="product-action">
-                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                            <a href="#"><i class="fa fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <h3><span>{{hotel.Price}}</span>/-</h3>
-                                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                    <div class="col-md-12">
+                                        <input type="email" class="form-control" placeholder="Your Email" />
                                     </div>
                                 </div>
-                            </div>
-    {% endfor %}                                                        
-                            </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                </div>
+                                <div><button class="btn" type="submit">Send Message</button></div>
+                            </form>
                         </div>
-
-                    </div>  
-
-            
-        <!-- Product List End -->          
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+              
+        
+        <!-- Back to Top -->
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
         <!-- JavaScript Libraries -->
